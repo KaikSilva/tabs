@@ -1,5 +1,5 @@
 <h1>
-    Widget WhatsUP - Dasckup 
+    Tabs 
 </h1>
 
 <img src="https://cdn.dasckup.com/main/assets/images/logo/tabs.png" />
