@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css"/>
+
+</head>
+    <body>
+
+        <div class="content-main">
+            <div id="tabs">
+                <div class="tab-links">
+                    <a onClick="ShowTab(this)" class="tab-link active" data-id="prepare" data-open>Tab 1</a>
+                    <a onClick="ShowTab(this)" class="tab-link" data-id="produce">Tab 2</a>
+                    <a onClick="ShowTab(this)" class="tab-link" data-id="delivery">Tab 3</a>
+                </div>
+
+                <div class="tab-content">
+                    <section  style="display: block" class="tab-contents" id="prepare">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, reiciendis?
+                    </section>
+                    <section  class="tab-contents" id="produce">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur ea eos fuga fugiat ratione recusandae ut voluptatibus! Doloribus dolorum eum facere mollitia odit quas ut?
+                    </section>
+                    <section  class="tab-contents" id="delivery">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab asperiores, atque autem blanditiis ea et magni molestias nam nihil nisi, nostrum omnis repellat reprehenderit sit tempora tempore voluptatem. Eos facere ipsam magnam officiis quidem repellat.
+                    </section>
+                </div>
+            </div>
+            <div>
+                <img src="html5-js-css3-logo.png" width="300px" alt="">
+            </div>
+        </div>
+
+        <script>
+            function ShowTab(e) {
+                hideAllTabs(e.getAttribute("key"));
+                var t = e.getAttribute("data-id");
+                (e.className += " active"), (document.querySelector("#" + t).style.display = "block");
+            }
+            function hideAllTabs() {
+                document.querySelectorAll(".tab-link").forEach((e) => {
+                    e.className = e.className.replace(" active", "");
+                })
+                    document.querySelectorAll(".tab-contents").forEach((e) => {
+                        e.style.display = "none";
+                    });
+            }
+        </script>
+
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

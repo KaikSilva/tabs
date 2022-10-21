@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+html, body { height: 100%; }
+
+body{
+    background: rgb(11,130,194);
+    background: linear-gradient(164deg, rgba(11,130,194,1) 0%, rgba(2,65,109,1) 81%);
+    margin: 0px;
+    animation: colors 8s ease infinite;
+}
+
+@keyframes colors {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+.content-main{
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+
+div#tabs{
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #fff;
+    box-shadow: 8px 5px 20px 1px #00000057;
+    width: 25%;
+    margin-bottom: 35px;
+}
+
+.tab-links{
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+a.tab-link {
+    border: none;
+    background: transparent;
+    font-size: 17px;
+    padding: 14px;
+    outline: none;
+    position: relative;
+    font-weight: 600;
+    margin: 5px;
+}
+
+a.tab-link::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    content: "";
+    height: 2px;
+    width: 0%;
+
+    background-color: rgb(11,130,194); /** cor da borda aqui */
+    transition: .4s;
+}
+
+a.tab-link:hover::after,
+a.tab-link.active::after {
+    width: 100%;
+}
+
+
+.tab-content section.tab-contents{
+    display: none;
+}
+
+.tab-content>section.tab-contents {
+    animation: upTab 1s;
+}
+
+@keyframes upTab {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+    }
+}
